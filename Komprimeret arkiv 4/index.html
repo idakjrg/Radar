@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="billeder/logo.png" type="image/png">
+    <title>Radar</title>
+</head>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Radar logo">
+            </a>
+            <!-- Burger Menu -->
+            <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+            <label for="burger-toggle" class="burger-label">☰</label>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="form.html">Forum</a></li>
+                <li><a href="frivillig.html">Frivillig</a></li>
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Studierabat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Popup-container -->
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <img src="chatbot.jpg" alt="Popup Billede">
+            <span id="close-popup" class="close-button">&times;</span>
+        </div>
+    </div>
+    <script src="forsidechatbot.js"></script>
+
+    <!-- Video -->
+    <div class="video-container">
+        <video src="1306d8be7fca4b89899002981bf8453c.MP4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- Tekst under video -->
+    <h2 class="welcome-text">Spotfestival 2025!</h2>
+    <p class="welcome-text">
+        Glæd dig til 2025! Der skyder vi vores spotfestival i gang fra d. 2-3 maj i samarbejde med godsbanen. 
+        Vi glæder os til en kanon fest. Ansøgningsrunden 2025 for artister og bands er officielt lukket. 
+        Hvis du er interesseret i at spille til Spotfestival 2026, så åbner vi en ny ansøgningsrunde 1. oktober 2025. 
+        Dette er en god mulighed for nye artister og bands til at få større netværk og blive set og hørt af en masse musikelskere i Aarhus.
+        <br><br>
+        Billetsalget for Early bird tickets for Spot 2025 er nu startet, og du kan købe 3 slags billetter nedenfor.
+    </p>
+
+    <!-- Billet-container -->
+    <div class="ticket-container">
+        <!-- Billet 1 -->
+        <div class="ticket">
+            <h2>"All Day Ticket"</h2>
+            <p>Gives acces to SPOT Festival on May 2nd and 3rd 2025</p>
+            <p>650 DKK</p>
+            <p>+ fee</p>
+            <button>Buy</button>
+        </div>
+        <!-- Billet 2 -->
+        <div class="ticket">
+            <h2>Friday Ticket</h2>
+            <p>Gives acces to SPOT Festival on Friday May 2nd</p>
+            <p>550 DKK</p>
+            <p>+ fee</p>
+            <button>Buy</button>
+        </div>
+        <!-- Billet 3 -->
+        <div class="ticket">
+            <h2>Saturday Ticket</h2>
+            <p>Gives acces to SPOT Festival on Saturday May 3rd</p>
+            <p>550 DKK</p>
+            <p>+ fee</p>
+            <button>Buy</button>
+        </div>
+    </div>
+
+    <!-- Tekst under billetter -->
+    <h3 class="styled-heading">
+    Vi stræber altid for at gøre Radar endnu vildere. Derfor vil vi meget gerne høre fra dig. 
+        Har du nogle ideer til noget underholdning fx karaoke night eller musikbingo? 
+        Derudover vil vi gerne høre dine ideer til nye kunstnere, der ville kunne spille koncert på Radar. 
+        Vi glæder os til at læse din ide. Alle ideer er velkomne!
+    </h3>
+
+    <!-- Formular-container -->
+    
+    <div class="forms-container">
+        <div class="form-container">
+
+
+            <form action="/action_page.php">
+                <label for="subject1">Forslag til underholdning</label>
+                <textarea id="subject1" name="subject1" placeholder="Skriv dine ideer her!" style="height:200px;"></textarea>
+                <input type="submit" value="Indsend">
+            </form>
+        </div>
+        <div class="form-container">
+            <form action="/action_page2.php">
+                <label for="subject2">Forslag til kunstnere</label>
+                <textarea id="subject2" name="subject2" placeholder="Skriv dine ideer her!" style="height:200px;"></textarea>
+                <input type="submit" value="Indsend">
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                Karen Wegeners Gade 6<br>
+                DK 8000 Aarhus C<br>
+                Telefon: +45 8676 0344
+            </p>
+            <p>
+                Kontakt<br>
+                Bookingforespørgsler: booking(@)radarlive.dk<br>
+                Generel kontakt: kontakt(@)radarlive.dk
+            </p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="face.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://open.spotify.com" target="_blank">
+                    <img src="spotify.png" alt="Spotify">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

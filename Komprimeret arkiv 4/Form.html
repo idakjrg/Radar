@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="icon" href="billeder/logo.png" type="image/png">
+    <title>Radar</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="radarforside.html" class="logo">
+                <img src="logo.png" alt="Radar logo">
+            </a>
+            <!-- Burger Menu -->
+            <input type="checkbox" id="burger-toggle" class="burger-checkbox">
+            <label for="burger-toggle" class="burger-label">☰</label>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="donation.html">Donation</a></li>
+                <li><a href="form.html">Forum</a></li>
+                <li><a href="frivillig.html">Frivillig</a></li>
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Studierabat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery">
+        <img src="mennesker.png" alt="Billede 1">
+        <img src="radarskilt.png" alt="Billede 2">
+        <img src="sanger.png" alt="Billede 3">
+        <img src="scene.png" alt="Billede 4">
+        <img src="drag.png" alt="Billede 5">
+        <img src="kunstner.png" alt="Billede 6">
+    </div>
+    
+   
+    
+    <header>
+        <h1>Radar Forum</h1>
+        <p>Del dine oplevelser fra Radar!</p>
+
+    </header>
+    <div class="text-container">
+       
+        <p>Radar Forum er stedet, hvor vi samler alle, der elsker musik, kunst og unikke oplevelser i Aarhus. Uanset om du er her for at dele dine minder, finde inspiration eller få svar på spørgsmål, er dette forummet for dig!
+
+            Har du været til en koncert eller et arrangement på Radar, der gjorde et særligt indtryk på dig? På Radar Forum kan du dele dine tanker, billeder og historier, der har betydet noget for dig. <br>
+            <br>
+
+            Radar handler om at skabe og dele fællesskaber – hvad er fællesskaber for dig? Her kan du inspirere andre med dine anbefalinger og fortælle os, hvad der gjorde din oplevelse speciel.
+            
+            Hvis du har spørgsmål om kommende arrangementer, billetter eller åbningstider, er Radar Forum det perfekte sted at finde svar. Radar-teamet og andre brugere står klar til at hjælpe med information og gode råd, så du får mest muligt ud af dine besøg på Radar. <br>
+            <br>
+            Er musik noget, der samler os, eller noget, vi oplever individuelt? Del din mening i forummet og deltag i spændende diskussioner om, hvad musik betyder for dig.
+            
+            Det er også her, du kan møde ligesindede og blive en del af et engageret fællesskab. Kommentér på andres indlæg, deltag i spændende diskussioner, og del praktiske tips til Radar-besøg. Forumet er dit sted til at udveksle ideer, tanker og oplevelser med andre, der brænder for kultur og musik. <br>
+            <br>
+            
+            Radar Forum er mere end bare et sted at dele – det er en platform, hvor vi sammen kan fejre musikkens og kunstens magi. Her i Aarhus skaber vi de øjeblikke, der gør en forskel, og bygger bro mellem mennesker gennem kultur og kreativitet.
+            
+            Klik på "Opret Indlæg" og bliv en aktiv del af Radar Forum i dag. Del dine oplevelser, stil dine spørgsmål, og vær med til at skabe et levende, inspirerende fællesskab. <br>
+            <br>
+            Vi glæder os til at høre fra dig!</p>
+    </div>
+    <main>
+        <form action="submit.php" method="POST">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" placeholder="Dit navn" required>
+            
+            <label for="experience">Din oplevelser og billeder her!:</label>
+            <textarea id="experience" name="experience" rows="5" placeholder="Skriv din oplevelse her..." required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <div class="forum">
+        <h2>Kategorier</h2>
+        <ul class="categories">
+            <li><a href="#oplevelser">Oplevelser på Radar</a></li>
+            <li><a href="#arrangementer">Kommende arrangementer</a></li>
+            <li><a href="#feedback">Anbefalinger & feedback</a></li>
+            <li><a href="#frivillig">Hvordan det er at være frivillig</a></li>
+            <li><a href="#billeder">Del dine billeder</a></li>
+            <li><a href="#spørgsmål">Spørgsmål</a></li>
+            <li><a href="#Lightbooth">Lightbooth billeder</a></li>
+        </ul>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p> 
+                Karen Wegeners Gade 6 <br>
+                DK 8000 Aarhus C <br>
+                Telefon +45 8676 0344</p>
+
+            <p>Kontakt <br>
+                Bookingforespørgsler: <a href="mailto:booking@radarlive.dk">booking@radarlive.dk</a><br>
+                Generel kontakt: <a href="mailto:kontakt@radarlive.dk">kontakt@radarlive.dk</a>
+            </p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="icon facebook" aria-label="Facebook">
+                    <img src="face.png" alt="Facebook logo">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="icon twitter" aria-label="Instagram">
+                    <img src="instagram.png" alt="Instagram logo">
+                </a>
+                <a href="https://open.spotify.com" target="_blank" class="icon instagram" aria-label="Spotify">
+                    <img src="spotify.png" alt="Spotify logo">
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="icon linkedin" aria-label="YouTube">
+                    <img src="youtube.png" alt="YouTube logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

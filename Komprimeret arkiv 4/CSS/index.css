@@ -1,0 +1,456 @@
+/* header styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #002642;
+    color: white;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ef7853;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+/* Burger Menu */
+.burger-checkbox {
+    display: none;
+}
+
+.burger-label {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .burger-label {
+        display: block; /* Vis burgerikon */
+    }
+
+    .nav-links {
+        display: none; /* Skjul menuen som standard */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background-color: #ef7853;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .burger-checkbox:checked + .burger-label + .nav-links {
+        display: flex; /* Vis menuen */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        padding: 10px 15px;
+        width: 100%;
+    }
+}
+/* Skjul popup som standard */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Halvgennemsigtig sort baggrund */
+    z-index: 1000;
+}
+
+/* Popup-container styling */
+.popup-container {
+    display: none; /* Skjul popup som standard */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Transparent baggrund */
+    z-index: 1000;
+    pointer-events: none; /* Sørg for, at klik kun registreres på popup'en */
+}
+
+/* Popup-indhold */
+.popup-content {
+    position: absolute;
+    top: 20%; /* Flyt popup nedad */
+    right: 5%; /* Placér popup til højre */
+    background-color: white; /* Popup baggrund */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px; /* Maksimal bredde */
+    width: 90%; /* Responsiv bredde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge for dybde */
+    pointer-events: auto; /* Tillad interaktion med popup-indholdet */
+}
+
+/* Popup-billedet */
+.popup-content img {
+    max-width: 100%; /* Tilpas billedets bredde til containeren */
+    height: auto; /* Bevar proportioner */
+    border-radius: 10px; /* Runde hjørner */
+}
+
+/* Luk-knap */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+
+/* Video-container styling */
+.video-container {
+    margin-top: 10px; /* Afstand fra menubaren */
+    text-align: center; /* Centrer videoen */
+}
+
+/* Video-styling */
+.video-container video {
+    width: 80%; /* Reducerer bredden til 80% af skærmen */
+    max-width: 1600px; /* Maksimal bredde for store skærme */
+    height: auto; /* Bevarer proportionerne */
+    border-radius: 10px; /* Runde hjørner for en blødere effekt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge for at give dybde */
+    margin-top: 30px; /* Ekstra afstand fra containerens top */
+}
+
+
+/* Welcome text styling */
+.welcome-text {
+    font-family: 'Arial', sans-serif; /* Standard skrifttype */
+    color: #ffffff; /* Tekstfarve */
+    background-color: #004080; /* Baggrundsfarve */
+    text-align: center; /* Centrering af teksten */
+    margin: 20px auto; /* Ydre afstand */
+    padding: 20px; /* Indre afstand */
+    border-radius: 10px; /* Runde hjørner */
+    max-width: 800px; /* Begræns bredde */
+    line-height: 1.8; /* Øg læsbarhed */
+    font-size: 18px; /* Skriftstørrelse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Let skygge */
+}
+
+/* Welcome text styling */
+.welcome-text {
+    font-family: 'Arial', sans-serif; /* Standard skrifttype */
+    color: #ffffff; /* Tekstfarve */
+    background-color: #ef7853; /* Baggrundsfarve */
+    text-align: center; /* Centrering af teksten */
+    margin: 20px auto; /* Ydre afstand */
+    padding: 20px; /* Indre afstand */
+    border-radius: 10px; /* Runde hjørner */
+    max-width: 800px; /* Begræns bredde */
+    line-height: 1.8; /* Øg læsbarhed */
+    font-size: 18px; /* Skriftstørrelse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Let skygge */
+}
+
+/* H2 Styling */
+.welcome-text h2 {
+    font-size: 24px; /* Større overskrift */
+    color: #ef7853; /* Fremhæv farve */
+    text-transform: uppercase; /* Store bogstaver */
+    margin-bottom: 10px; /* Afstand til undertekst */
+    font-weight: bold; /* Fed skrift */
+}
+
+
+
+
+/* Ticket container */
+.ticket-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+.ticket {
+    background-color: #ef7853;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+/* Ticket container styling */
+.ticket-container {
+    display: flex;
+   
+    justify-content: center; /* Centrerer billetterne */
+    gap: 20px; /* Plads mellem billetterne */
+    margin: 40px auto; /* Plads omkring containeren */
+    max-width: 1200px; /* Begrænset bredde */
+    padding: 20px; /* Indre plads */
+}
+/* Knap styling */
+.ticket button {
+    background-color: #004080; /* Knapfarve */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-effekt på knap */
+.ticket button:hover {
+    background-color: #002642; /* Mørkere farve ved hover */
+}
+
+.styled-heading {
+    font-family: 'Arial', sans-serif; /* Skrifttype */
+    font-size: 24px; /* Tekststørrelse */
+    color: #ef7853; /* Tekstfarve */
+    background-color: #002642; /* Baggrundsfarve */
+    text-align: center; /* Centrering af tekst */
+    padding: 10px 20px; /* Indre afstand */
+    margin: 20px auto; /* Ydre afstand */
+    max-width: 800px; /* Begrænset bredde */
+    border-radius: 5px; /* Runde hjørner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge for dybde */
+    text-transform: uppercase; /* Store bogstaver */
+    letter-spacing: 2px; /* Afstand mellem bogstaver */
+    line-height: 1.6; /* Linjehøjde */
+}
+
+
+/* Forms container */
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Individuelle form containers */
+.form-container {
+    background-color: #ef7853; /* Baggrundsfarve */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge for dybde */
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Formularens elementer */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+.form-container textarea {
+    width: 100%; /* Fylder hele containerens bredde */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Indre skygge */
+    resize: vertical; /* Tillad lodret resizing */
+}
+
+/* Send-knap styling */
+.form-container input[type="submit"] {
+    background-color: #002642; /* Ændret farve */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Forms container */
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Individuelle form containers */
+.form-container {
+    background-color: #ef7853; /* Baggrundsfarve */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skygge for dybde */
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Formularens elementer */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+}
+
+.form-container textarea {
+    width: 100%; /* Fylder hele containerens bredde */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Indre skygge */
+    resize: vertical; /* Tillad lodret resizing */
+}
+
+/* Send-knap styling */
+.forms-container .form-container input[type="submit"] {
+    background-color: #004236; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.forms-container .form-container input[type="submit"] {
+    background-color: #002642 !important; /* Blå farve */
+    color: white !important;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+/* Footer styling */
+.footer {
+    background-color: #ef7853;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Standard layout for små skærme */
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.6;
+    flex: 1; /* Tillader fleksibilitet */
+}
+
+/* Social media icons styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsiv styling */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row; /* Vandret layout på større skærme */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-content p {
+        text-align: left; /* Tekstjustering til venstre på store skærme */
+    }
+}

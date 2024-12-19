@@ -1,0 +1,238 @@
+/*Header styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #002642;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ef7853;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+/* Burger Menu (mobil-visning) */
+.burger-checkbox {
+    display: none;
+}
+
+.burger-label {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+/* Responsiv styling for navigation */
+@media (max-width: 768px) {
+    .burger-label {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #ef7853;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .burger-checkbox:checked + .burger-label + .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
+
+/* Flex-container styling */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+
+
+/* Tekst styling */
+.text {
+    flex: 1 1 50%;
+    max-width: 600px;
+    line-height: 1.5;
+    color: white;
+    padding-left: 5%;
+    
+}
+
+h1 {
+    font-family: Arial, sans-serif; /* Skrifttype */
+    font-size: 36px; /* Skriftstørrelse */
+    color: #ef7853; /* Tekstfarve */
+    text-align: center; /* Centrer teksten */
+    margin-top: 20px; /* Afstand til toppen */
+    margin-bottom: 20px; /* Afstand til bunden */
+    text-transform: uppercase; /* Ændrer teksten til store bogstaver */
+    letter-spacing: 2px; /* Afstand mellem bogstaver */
+    line-height: 1.4; /* Linjeafstand */
+}
+
+.text h2 {
+    font-size: 24px;
+    color: #ef7853;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Billede-container styling */
+.image-container {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Billede styling */
+.image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+/* Flex-image styling for store billeder */
+.flex-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #ef7853;
+    color: white;
+    padding: 10px 20px; /* Reducér padding */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer indholdet */
+    align-items: center;
+    gap: 10px; /* Reducér afstand mellem elementer */
+    max-width: 1200px; /* Begræns bredde */
+    margin: 0 auto;
+}
+
+.footer-content p {
+    flex: 1 1 auto; /* Sørg for, at tekst ikke udvider sig unødvendigt */
+    margin: 5px; /* Reducér margin */
+    line-height: 1.4;
+    font-size: 14px; /* Mindre font for kompakt design */
+    text-align: center;
+    max-width: 300px; /* Begræns tekstbredde */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reducér afstand mellem ikoner */
+}
+
+.social-icons img {
+    width: 24px; /* Mindre ikoner */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stabel layout på små skærme */
+        align-items: center;
+        gap: 10px; /* Reducér mellemrum yderligere */
+    }
+
+    .footer-content p {
+        font-size: 12px; /* Mindre tekststørrelse for små skærme */
+        line-height: 1.2; /* Kompakt linjeafstand */
+        max-width: 90%; /* Brug det meste af skærmens bredde */
+    }
+
+    .social-icons img {
+        width: 20px; /* Endnu mindre ikoner på mobil */
+        height: 20px;
+    }
+}

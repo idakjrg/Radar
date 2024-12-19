@@ -1,0 +1,283 @@
+/* Header styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #002642;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ef7853;
+    position: relative;
+}
+
+.logo img {
+    height: 80px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+/* Burger Menu */
+.burger-checkbox {
+    display: none;
+}
+
+.burger-label {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Responsiv Navigation */
+@media (max-width: 768px) {
+    .burger-label {
+        display: block; /* Vis burgerikon */
+    }
+
+    .nav-links {
+        display: none; /* Skjul menu som standard */
+        flex-direction: column; /* Gør menu lodret */
+        background-color: #ef7853;
+        position: absolute;
+        top: 60px; /* Placer under navbaren */
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999; /* Sørg for, at menuen vises øverst */
+    }
+
+    .burger-checkbox:checked + .burger-label + .nav-links {
+        display: flex; /* Vis menu ved klik */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Giv mellemrum mellem links */
+    }
+
+    .nav-links li a {
+        padding: 10px 15px;
+        width: 100%; /* Fylder hele bredden */
+    }
+}
+
+
+
+/* =========================== */
+/* Header Styling              */
+/* =========================== */
+header {
+    border: 3px solid #ef7853;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ef7853;
+    color: white;
+    text-align: center;
+}
+
+/* =========================== */
+/* Gallery Styling             */
+/* =========================== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.gallery img {
+    width: 49%;
+    max-width: 350px;
+    height: auto;
+    border: 4px solid #dddcdf;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* =========================== */
+/* Text Container              */
+/* =========================== */
+.text-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ef7853; 
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .text-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* =========================== */
+/* Forum Styling               */
+/* =========================== */
+form {
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ef7853;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #002642;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #002642;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005f9e;
+}
+/* Forum container */
+.forum {
+    background-color: #ef7853; /* Lys baggrundsfarve */
+    border: 2px solid #ef7853; /* Blå ramme */
+    border-radius: 10px; /* Runde hjørner */
+    padding: 30px; /* Indvendig afstand */
+    max-width: 800px; /* Begrænset bredde */
+    margin: 30px auto; /* Centrerer boksen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tilføjer skygge */
+    text-align: center; /* Centrerer overskrift og indhold */
+}
+
+/* Kategorier Styling */
+.categories {
+    list-style: none; /* Fjern punkttegn */
+    padding: 0;
+    margin: 20px 0; /* Afstand over og under */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Mellemrum mellem kategorier */
+    justify-content: center; /* Centrerer indholdet */
+}
+
+.categories a {
+    display: block;
+    padding: 12px 24px; /* Større knapper */
+    background-color: #002642; /* Blå baggrund */
+    color: white; /* Hvid tekst */
+    text-decoration: none; /* Fjern understregning */
+    border-radius: 5px; /* Runde hjørner */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.categories a:hover {
+    background-color: #005f9e; /* Mørkere blå ved hover */
+    transform: scale(1.05); /* Zoom-effekt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tilføj let skygge */
+}
+
+
+
+/* =========================== */
+/* Footer Styling              */
+/* =========================== */
+.footer {
+    background-color: #ef7853;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-content p {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-content .social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+
+    transition: transform 0.3s ease;
+}
+
+.footer-content .social-icons img:hover {
+    transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
